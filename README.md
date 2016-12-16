@@ -1,36 +1,9 @@
 # clojure-irc-client
 
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
+A very basic command line IRC client written with Clojure to help me learn the language.
 
 ## Usage
 
-FIXME: explanation
+Run the JAR from the command line with:
 
-    $ java -jar clojure-irc-client-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2016 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+    $ java -jar clojure-irc-client-0.1.0-standalone.jar -n <nickname> -h <hostname> [-p <port>]
