@@ -9,4 +9,5 @@
                  [com.gearswithingears/async-sockets "0.1.0"]]
   :main ^:skip-aot clojure-irc-client.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:uberjar {:aot :all}}
+  :uberjar-name "clojure-irc-client.jar")
