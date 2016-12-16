@@ -18,6 +18,12 @@
   (write socket (str "NICK " nick))
   (write socket (str "USER " nick " 0 * :" nick)))
 
+(defn input-listener [socket]
+  (loop []
+    (let [input (read-line)]
+      (println input)
+      (recur))))
+
 (defn handle-line [socket line]
   (println line)
   (cond
@@ -38,6 +44,7 @@
     (let [socket (socket-client port host)]
       (println (str "Connected to " host ":" port))
       (login-as-guest socket nick)
+      (input-listener socket)
       (message-listener socket))
     (catch Exception e
       (println (str "Failed to connect to " host ":" port)))))
