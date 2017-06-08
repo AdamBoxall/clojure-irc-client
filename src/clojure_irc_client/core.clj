@@ -11,7 +11,7 @@
   ([socket message print?]
    (when print?
      (println message))
-    (async/>!! (:out socket) (str message "\r"))))
+   (async/>!! (:out socket) (str message "\r"))))
 
 (defn login-as-guest [socket nick]
   (println (str "Logging in as guest " nick))
@@ -45,7 +45,7 @@
       (println (str "Connected to " host ":" port))
       (login-as-guest socket nick)
       (input-listener socket)
-      (message-listener socket))
+      #_(message-listener socket))
     (catch Exception e
       (println (str "Failed to connect to " host ":" port)))))
 
